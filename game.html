@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>game</title>
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+  <link href="app.css" rel="stylesheet"></head>
+  <body>
+
+    <main>
+      <section class='formWindow' data-status='active'>
+        <form>
+          <label>name:</label><br/> <input id="name" type="text" placeholder="name" ><br/>
+          <label>age:</label><br/> <input id="age" type="text" placeholder="age"><br/>
+          <label>Email:</label><br/><input id="email" type="email" placeholder="Email"><br/>
+          <input type="button" value="Submit">
+        </form>
+      </section>
+
+      <section class='playWindow' data-status='hidden'>
+        <canvas></canvas>
+      </section>
+
+      <section class='taskWindow' data-status='hidden'>
+          <div class="taskWindow-container">
+              <h3 class="task-heading-section"></h3>
+              <div class="task-body-section">
+                  <div class="task-body"></div>
+                  <input class="task-input" id="Answer" type="text" placeholder="Answer" autofocus>
+              </div>
+              <button class="check-button" data-func="check">Check</button>
+              <div class="task-check-section"></div>
+              <div class="task-answer-section">
+                  <h3 class="task-show-answer"></h3>
+              </div>
+          </div>
+      </section>
+      <section class='resultWindow' data-status='hidden'>
+
+      </section>
+    </main>
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="app.bundle.js"></script></body>
+</html>

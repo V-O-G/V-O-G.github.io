@@ -1,0 +1,219 @@
+/*Global*/
+@font-face {
+  font-family: "Cagliostro";
+  src: url(fonts/Cagliostro-Regular.ttf) format("truetype");
+}
+* {
+  margin: 0;
+}
+body {
+margin: 0px auto;
+padding: 0;
+text-align: center;
+background: #DCDCDC;
+}
+
+/*form*/
+form label, form input {
+  width: 150px;
+  padding: 5px;
+  margin: 5px;
+}
+/*PlayArea*/
+main {
+  display: flex;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 1%;
+  min-height: calc(100vh - 20px);
+  margin: 10px;
+}
+
+main section {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  overflow: hidden;
+  margin: 0 auto;
+  min-width: 750px;
+  border-radius: 1%;
+}
+
+[data-status = "hidden"] {
+  display: none;
+}
+[data-status = "active"] {
+  display: flex;
+}
+
+main section .spellModWin {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  width: 350px;
+  height: 350px;
+  background: #FFF8DC;
+  opacity: 0.9;
+  border-radius: 50%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      ". taskDif0 ."
+      " taskDif1 . taskDif2"
+      ". taskDif3 .";
+}
+
+[data-task-dif='0'] {
+  grid-area: taskDif0;
+}
+[data-task-dif='1'] {
+  grid-area: taskDif1;
+}
+[data-task-dif='2'] {
+  grid-area: taskDif2;
+}
+[data-task-dif='3'] {
+  grid-area: taskDif3;
+}
+/*result-table*/
+
+.resultWindow table, th, td {
+   border: 1px solid #ffffff;
+   font-size: 20px;
+   margin:10px auto;
+   text-align: center;
+   min-width: 10vw;
+}
+main section button {
+  font-size: 16px;
+  color: white;
+
+  background-color: #D2691E;
+  text-align: center;
+  border-radius: 10%;
+  border-color: orange;
+}
+main section .spellModWin button {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+  border-width:thick;
+}
+main section button:hover {
+  border-color: white;
+  background-color: #A0522D;
+}
+
+main section .spellModWin button img {
+  height: 70px ;
+  margin: 0 auto;
+}
+/*task*/
+
+main section.taskWindow {
+  background-image: url(images/task-background.png);
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-position: center;
+  text-align: center;
+  font-family: 'Cagliostro';
+  font-size: 2em;
+}
+main section.taskWindow button, .taskWindow input {
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  font-size: 32px;
+  border-radius: 5%;
+  margin:10px auto;
+}
+.taskWindow-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1em;
+}
+.task-heading-section {
+    height: 15%;
+    display: flex;
+    align-items: center;
+}
+.task-body-section {
+    border: 5px solid green;
+    margin: 0;
+    font-family: "Cagliostro";
+    font-size: 7vh;
+    user-select: none;
+    height: 35%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.task-check-section {
+    height: 10%;
+}
+.task-answer-section {
+    height: 30%;
+    display: none;
+}
+.task-show-answer {
+    color: green;
+}
+.task-body {
+    display: flex;
+    align-items: center;
+    height: 65%;
+}
+.task-input {
+    height: 35%;
+    width: 50%;
+    display: none;
+}
+.check-button {
+    height: 10%;
+}
+.correct {
+    color: green;
+}
+.incorrect {
+    color: red;
+}
+/*task-scrambles*/
+
+.scramble-word {
+  display: flex;
+}
+.tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+  border-radius: 10px;
+  width: 66px;
+  height: 65px;
+  margin: 5px;
+  cursor: pointer;
+}
+/*task-audio*/
+
+.btnAudioPlay {
+  width: 200px;
+  height: 40px;
+  background-color: #24aecd;
+  font-size: 24px;
+  font-family: 'comic';
+  margin: 15px auto;
+  color: black;
+  cursor: pointer;
+  opacity: .7;
+  font-family: sans-serif;
+}
